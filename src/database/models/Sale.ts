@@ -7,6 +7,10 @@ export default function (sequelize: any, DataTypes: any) {
                 autoIncrement: true,
                 primaryKey: true,
             },
+            productId: {
+                type: DataTypes.INTEGER(11),
+                allowNull: false,
+            },
             quantity: {
                 type: DataTypes.INTEGER(11),
                 allowNull: false,
