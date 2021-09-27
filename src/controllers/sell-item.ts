@@ -27,7 +27,10 @@ export default async function (req: Request, res: Response) {
         ).then(async function (data: any) {
             if (data) {
                 // Create new sales record
-                let sale = await models.Sale.create({ quantity: sell_quantity })
+                let sale = await models.Sale.create({ 
+                    quantity: sell_quantity, 
+                    productId: product.id 
+                }).catch(console.trace);
                 if (sale) {
                     // Remove already sold items in respect to their expiry date
                     do {
@@ -62,7 +65,7 @@ export default async function (req: Request, res: Response) {
                     // Send response
                     res.json({});
                 } else {
-                    res.json({ error: "Request failed. Please try again later."});
+                    res.json({ error: "Request failed. Please try again later." });
                 }
             } else {
                 res.json({
