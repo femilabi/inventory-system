@@ -9,7 +9,7 @@ Note that the guide assumes you are familiar with **node.js** environment and it
 3. (Optional) The Application Port is defaulted to **3000** and can be changed in **_/index.ts_** directly inside of the project root directory.
 4. Navigate to project root directory on your CLI and run any of the commands, **_npm run start_** or **_npm run start:dev_**
 5. Then you should have your app run successfully.
-6.  Then manually add the perishable products to the **is_products** database table
+6.  Then manually add the perishable products to the **is_products** table in the database
 
 # Endpoints
 1. **POST** /:item/add
